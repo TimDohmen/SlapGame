@@ -23,23 +23,23 @@ let player1 = {
 let items = {
   pGun: {
     name: "Portal Gun",
-    modifier: 5,
+    modifier: 2,
     description: "Opens a portal to antother dimension",
   },
   mBox: {
     name: "Mr.Meeseeks Box",
-    modifier: 10,
+    modifier: 5,
     description: "Summon multiple Meeseeks for assistance",
 
   },
   mSeed: {
     name: "Mega Seeds!",
-    modifier: 15,
+    modifier: 10,
     description: "You know where to put these....",
   },
 }
 let timesHit = 0
-let multiplier = player1.inventory
+
 
 
 
@@ -50,11 +50,19 @@ function giveItem(item) {
 }
 
 
-function addMods(stuff) {
-  for (let i = 0; i <= player1.inventory.length; i++) {
+function addMods() {
+  let current = player1.inventory.length
+  let modTotal = 0
+  for (let i = 0; i < current; i++) {
+
+    modTotal += player1.inventory[i].modifier
 
   }
+  return modTotal
 }
+
+
+
 
 
 
@@ -73,7 +81,7 @@ function hit(style) {
 
   } else {
     restartElem.classList.remove('hidden')
-    restartElem.innerText = "You beat Raid Boss Morty and find Ricks portal gun lying in the corner"
+    restartElem.innerText = "You beat Raid Boss Morty and a interdimensional rift appears in the corner"
   }
 
   draw()

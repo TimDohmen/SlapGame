@@ -39,16 +39,20 @@ let items = {
   },
 }
 let timesHit = 0
-let multiplier = items.modifier
+let multiplier = player1.inventory
 
-// function giveItem(item) {
-//   player1.inventory.push(item)
-// }
+
+
+function giveItem(item) {
+  if (items.hasOwnProperty(item)) {
+    player1.inventory.push(items[item])
+  }
+}
+
 
 function addMods(stuff) {
-  for (let i = 0; i <= items.length; i++) {
-    if (stuff == multiplier) {
-    } player1.health -= multiplier
+  for (let i = 0; i <= player1.inventory.length; i++) {
+
   }
 }
 
@@ -65,7 +69,7 @@ function hit(style) {
   let pow = player1.moves[style]
 
   if (player1.health > 0) {
-    player1.health -= pow
+    player1.health -= pow + addMods()
 
   } else {
     restartElem.classList.remove('hidden')

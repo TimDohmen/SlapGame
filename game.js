@@ -2,11 +2,13 @@
 let healthEle = document.getElementById("health")
 let hitEle = document.getElementById("hit-counter")
 let restartElem = document.getElementById("restart")
+let buttonElem = document.getElementById('replay')
 // let moves = {
 //   slap: 1,
 //   kick: 5,
 //   punch: 10
 // }
+let timesHit = 0
 let player1 = {
   name: "Guy",
   health: 100,
@@ -38,9 +40,6 @@ let items = {
     description: "You know where to put these....",
   },
 }
-let timesHit = 0
-
-
 
 
 function giveItem(item) {
@@ -62,10 +61,6 @@ function addMods() {
 }
 
 
-
-
-
-
 function hit(style) {
   // if (style == "slap") {
   //   health -= 1
@@ -81,6 +76,8 @@ function hit(style) {
 
   } else {
     restartElem.classList.remove('hidden')
+    buttonElem.classList.remove('hidden')
+
     restartElem.innerText = "You beat Raid Boss Morty and a interdimensional rift appears in the corner"
   }
 
@@ -90,9 +87,13 @@ function hit(style) {
 function win() {
 
 }
+
 function replay() {
   player1.health = 100;
+  timesHit = 0
   restartElem.classList.add('hidden')
+  buttonElem.classList.add('hidden')
+  draw()
 }
 
 function draw() {

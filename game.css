@@ -16,5 +16,6 @@ body{
   display: none;
 }
 .pic{
-  cursor: pointer
+  cursor: pointer;
+  max-width: 20vw;
 }

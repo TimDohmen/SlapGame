@@ -1,0 +1,20 @@
+body{
+  background: url(http://lightfarm.com/wp-content/uploads/2017/08/Rick-Morty_1920.jpg);
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  
+}
+
+.boss{
+  max-width: 50vh;
+}
+.topper{
+  align-content: top
+}
+.hidden{
+  display: none;
+}
+.pic{
+  cursor: pointer
+}

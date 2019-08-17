@@ -20,7 +20,7 @@ body{
 }
 .pic{
   cursor: pointer;
-  max-width: 8vw;
+  max-width: 6vw;
 }
 .card{
   border-radius: 5px;

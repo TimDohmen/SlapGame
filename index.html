@@ -20,14 +20,45 @@
       <button class="hidden btn-danger" id="replay" onclick="replay()">Play again</button>
     </div>
     <div class="row">
-      <div class="col-12 m-auto d-flex ">
+      <div class="col-3 d-flex align-content-center justify-content-center row-wrap">
+        <div class="card">
+          Jerry's Power
+
+          <p>Slap : 2</p>
+          <p>Kick : 4</p>
+          <p>Punch : 12</p>
+
+        </div>
+
+        <div class="card">
+          Morty's Power
+
+          <p>Slap : 1</p>
+          <p>Kick : 5</p>
+          <p>Punch : 10 </p>
+
+
+          <div class="card">
+            Power Ups:
+
+            <p>Portal Gun +2</p>
+            <p>Mr. Meeseeks Box +5</p>
+            <p>Mega Seeds +10</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-9 m-auto d-flex ">
         <div class="col-6">
           <div class="topper">
             <h1 id="">Strong Man Jerry</h1>
             <span>Health:<span id='health'>100</span></span>
             <span>Times Hit:<span id='hit-counter'>--</span></span>
-            <img src="https://i.pinimg.com/originals/2a/c9/84/2ac9848f9a13087d290d725f3c662b5e.jpg" class="boss"
-              alt="raid boss jerry">
+            <div class="col-12">
+              <img src="https://i.pinimg.com/originals/2a/c9/84/2ac9848f9a13087d290d725f3c662b5e.jpg" class="boss"
+                alt="raid boss jerry">
+            </div>
             <div class="col-12 pt-3">
               <button class="btn-primary" onclick="hit('slap')">Slap</button>
               <button class="btn-primary" onclick="hit('kick')">Kick</button>
@@ -56,14 +87,20 @@
             <h1 id="">Raid Boss Morty</h1>
             <span>Health:<span id="mittHealth">100</span></span>
             <span>Times Hit:<span id="mittHit-Counter">--</span></span>
-            <img src="https://media.entertainmentearth.com/assets/images/97a7ac2ee1164819ac2ebd84ad031c3flg.jpg"
-              alt="morty" class="boss">
+            <div class="col-12">
+              <img src="https://media.entertainmentearth.com/assets/images/97a7ac2ee1164819ac2ebd84ad031c3flg.jpg"
+                alt="morty" class="boss">
+            </div>
+
             <!-- <div class="col-12 pt-3">
               <button class="btn-primary" onclick="hit('slap')">Slap</button>
               <button class="btn-primary" onclick="hit('kick')">Kick</button>
               <button class="btn-primary" onclick="hit('punch')">Punch</button>
             </div> -->
             <div class="col-12">
+
+
+
               <div class="hidden" id="mortyWep"></div>
               <div id="items">
                 <img
@@ -75,9 +112,9 @@
                 <img
                   src="https://vignette.wikia.nocookie.net/rickandmorty/images/f/f7/Mr._Meeseeks_Box.png/revision/latest?cb=20160909153718"
                   alt="meeseeks box" id="item3" onclick="giveMittItem('MrMeeseeksBox')" class="pic">
-
               </div>
             </div>
+
           </div>
         </div>
         <h2></h2>

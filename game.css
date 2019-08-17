@@ -3,6 +3,7 @@ body{
   background-size: cover;
   display: flex;
   text-align: center;
+  color: white;
   
 }
 
@@ -20,4 +21,10 @@ body{
 .pic{
   cursor: pointer;
   max-width: 8vw;
+}
+.card{
+  border-radius: 5px;
+  align-self: center;
+  
+  color: black
 }

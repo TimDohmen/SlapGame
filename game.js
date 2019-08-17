@@ -18,8 +18,6 @@ let player1 = {
     punch: 10
   },
   inventory: []
-
-
 }
 
 let items = {
@@ -41,25 +39,20 @@ let items = {
   },
 }
 
-
 function giveItem(item) {
   if (items.hasOwnProperty(item)) {
     player1.inventory.push(items[item])
   }
 }
 
-
 function addMods() {
   let current = player1.inventory.length
   let modTotal = 0
   for (let i = 0; i < current; i++) {
-
-    modTotal += player1.inventory[i].modifier
-
+    modTotal = player1.inventory[i].modifier
   }
   return modTotal
 }
-
 
 function hit(style) {
   // if (style == "slap") {
@@ -70,14 +63,11 @@ function hit(style) {
   //   health -= 10
   // }
   let pow = player1.moves[style]
-
-  if (player1.health > 0) {
+  if (player1.health > 1) {
     player1.health -= pow + addMods()
-
   } else {
     restartElem.classList.remove('hidden')
     buttonElem.classList.remove('hidden')
-
     restartElem.innerText = "You beat Raid Boss Morty and a interdimensional rift appears in the corner"
   }
 
@@ -85,6 +75,7 @@ function hit(style) {
 }
 
 function win() {
+
 
 }
 

@@ -10,12 +10,14 @@ body{
   max-width: 50vh;
 }
 .topper{
-  align-content: top
+  justify-content: center;
+  align-content: center;
+
 }
 .hidden{
   display: none;
 }
 .pic{
   cursor: pointer;
-  max-width: 20vw;
+  max-width: 8vw;
 }

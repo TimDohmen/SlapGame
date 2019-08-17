@@ -12,45 +12,83 @@
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-12">
-        <div class="topper">
-          <h1 id="">Raid Boss Morty</h1>
-          <span>Health:<span id="health">100</span></span>
-          <span>Times Hit:<span id="hit-counter">--</span></span>
-        </div>
-      </div>
-      <h2></h2>
-    </div>
+  <div class="container">
     <div class="col-12">
       <div class="hidden" id="restart">
 
       </div>
       <button class="hidden btn-danger" id="replay" onclick="replay()">Play again</button>
     </div>
-    <div class="col-12">
-      <img src="https://media.entertainmentearth.com/assets/images/97a7ac2ee1164819ac2ebd84ad031c3flg.jpg" alt="morty"
-        class="boss">
-      <img src="" alt="">
-      <div class="col-12 pt-3">
-        <button class="btn-primary" onclick="hit('slap')">Slap</button>
-        <button class="btn-primary" onclick="hit('kick')">Kick</button>
-        <button class="btn-primary" onclick="hit('punch')">Punch</button>
+    <div class="row">
+      <div class="col-12 m-auto d-flex ">
+        <div class="col-6">
+          <div class="topper">
+            <h1 id="">Strong Man Jerry</h1>
+            <span>Health:<span id='health'>100</span></span>
+            <span>Times Hit:<span id='hit-counter'>--</span></span>
+            <img src="https://i.pinimg.com/originals/2a/c9/84/2ac9848f9a13087d290d725f3c662b5e.jpg" class="boss"
+              alt="raid boss jerry">
+            <div class="col-12 pt-3">
+              <button class="btn-primary" onclick="hit('slap')">Slap</button>
+              <button class="btn-primary" onclick="hit('kick')">Kick</button>
+              <button class="btn-primary" onclick="hit('punch')">Punch</button>
+            </div>
+            <div class="col-12">
+              <div class="hidden" id="p1Wep"></div>
+
+              <div id="items">
+                <img
+                  src="https://vignette.wikia.nocookie.net/rickandmorty/images/4/45/Defense_Mega_Seed.png/revision/latest?cb=20160909051247"
+                  alt="Mega Seed" id="item1" onclick="giveItem('MegaSeed')" class="pic">
+                <img
+                  src="https://images.discordapp.net/avatars/301887723583569922/06e5fcaa65f33e5ffe29ff8eea85a5e5.png?size=512"
+                  alt="Portal gun" id="item2" onclick="giveItem('PortalGun')" class="pic">
+                <img
+                  src="https://vignette.wikia.nocookie.net/rickandmorty/images/f/f7/Mr._Meeseeks_Box.png/revision/latest?cb=20160909153718"
+                  alt="meeseeks box" id="item3" onclick="giveItem('MrMeeseeksBox')" class="pic">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 m-auto d-flex ">
+          <div class="topper">
+            <h1 id="">Raid Boss Morty</h1>
+            <span>Health:<span id="mittHealth">100</span></span>
+            <span>Times Hit:<span id="mittHit-Counter">--</span></span>
+            <img src="https://media.entertainmentearth.com/assets/images/97a7ac2ee1164819ac2ebd84ad031c3flg.jpg"
+              alt="morty" class="boss">
+            <!-- <div class="col-12 pt-3">
+              <button class="btn-primary" onclick="hit('slap')">Slap</button>
+              <button class="btn-primary" onclick="hit('kick')">Kick</button>
+              <button class="btn-primary" onclick="hit('punch')">Punch</button>
+            </div> -->
+            <div class="col-12">
+              <div class="hidden" id="mortyWep"></div>
+              <div id="items">
+                <img
+                  src="https://vignette.wikia.nocookie.net/rickandmorty/images/4/45/Defense_Mega_Seed.png/revision/latest?cb=20160909051247"
+                  alt="Mega Seed" id="item1" onclick="giveMittItem('MegaSeed')" class="pic">
+                <img
+                  src="https://images.discordapp.net/avatars/301887723583569922/06e5fcaa65f33e5ffe29ff8eea85a5e5.png?size=512"
+                  alt="Portal gun" id="item2" onclick="giveMittItem('PortalGun')" class="pic">
+                <img
+                  src="https://vignette.wikia.nocookie.net/rickandmorty/images/f/f7/Mr._Meeseeks_Box.png/revision/latest?cb=20160909153718"
+                  alt="meeseeks box" id="item3" onclick="giveMittItem('MrMeeseeksBox')" class="pic">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2></h2>
       </div>
     </div>
+
+
     <div class="col-12">
-      <div id="items">
-        <img
-          src="https://vignette.wikia.nocookie.net/rickandmorty/images/4/45/Defense_Mega_Seed.png/revision/latest?cb=20160909051247"
-          alt="Mega Seed" id="item1" onclick="giveItem('mSeed')" class="pic">
-        <img
-          src="https://images.discordapp.net/avatars/301887723583569922/06e5fcaa65f33e5ffe29ff8eea85a5e5.png?size=512"
-          alt="Portal gun" id="item2" onclick="giveItem('pGun')" class="pic">
-        <img
-          src="https://vignette.wikia.nocookie.net/rickandmorty/images/f/f7/Mr._Meeseeks_Box.png/revision/latest?cb=20160909153718"
-          alt="meeseeks box" id="item3" onclick="giveItem('mBox')" class="pic">
-      </div>
+
+      <img src="" alt="">
+
     </div>
   </div>
 

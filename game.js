@@ -6,7 +6,7 @@ let restartElem = document.getElementById("restart")
 let buttonElem = document.getElementById('replay')
 let mittHitEle = document.getElementById('mittHit-Counter')
 let mittHealthEle = document.getElementById('mittHealth')
-
+let victPortEle = document.getElementById('victoryPort')
 // let moves = {
 //   slap: 1,
 //   kick: 5,
@@ -53,6 +53,9 @@ let items = {
     modifier: 10,
     description: "You know where to put these....",
   },
+  nothing: {
+    modifier: 0
+  }
 }
 
 function giveItem(item) {
@@ -61,20 +64,35 @@ function giveItem(item) {
 
 
   }
-  wepEle.classList.remove('hidden')
-  wepEle.innerText = `Currently Equipped : ${(item)}`
+
+  if ((item) == "nothing") {
+    wepEle.classList.add('hidden')
+
+  } else {
+    wepEle.classList.remove('hidden')
+    wepEle.innerText = `Currently Equipped : ${(item)}`
+
+  }
 }
 
 
 
 function giveMittItem(item) {
-  let equip = 0
   if (items.hasOwnProperty(item)) {
     player2.inventory.push(items[item])
     mortyWepEle.classList.remove('hidden')
     mortyWepEle.innerText = `Currently Equipped : ${(item)}`
 
   }
+
+  if ((item) == "nothing") {
+    mortyWepEle.classList.add('hidden')
+
+  } else {
+    mortyWepEle.classList.remove('hidden')
+    mortyWepEle.innerText = `Currently Equipped : ${(item)}`
+  }
+
 }
 
 function addMods() {

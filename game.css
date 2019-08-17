@@ -8,7 +8,7 @@ body{
 }
 
 .boss{
-  max-width: 40vh;
+  max-width: 30vh;
 }
 .topper{
   justify-content: center;
@@ -20,11 +20,16 @@ body{
 }
 .pic{
   cursor: pointer;
-  max-width: 6vw;
+  max-width: 4vw;
 }
 .card{
   border-radius: 5px;
   align-self: center;
   
   color: black
+}
+.victory{
+
+  animation: rotation 2s infinite linear;
+
 }

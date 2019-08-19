@@ -47,3 +47,7 @@ min-height: 100vh;
 .buttons:hover{
   border: 2px solid black; border-radius: 100px;
 }
+.bigPic{
+  cursor: pointer;
+  max-width: 10vw;
+}

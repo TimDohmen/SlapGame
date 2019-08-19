@@ -7,6 +7,8 @@ let buttonElem = document.getElementById('replay')
 let mittHitEle = document.getElementById('mittHit-Counter')
 let mittHealthEle = document.getElementById('mittHealth')
 let victPortEle = document.getElementById('victoryPort')
+let bossHP = document.getElementById("healthBar")
+let bossHPJerry = document.getElementById("healthBarJerry")
 // let moves = {
 //   slap: 1,
 //   kick: 5,
@@ -114,14 +116,18 @@ function hit(style) {
   let pow = player1.moves[style] + addMods()
   if (player1.health > 1 && player2.health > 1) {
     player2.health -= pow
+    bossHP.value -= pow
+    bossHPJerry.value -= pow2
     player1.health -= pow2
   } else if (player1.health > 1 && player2.health < 1) {
-    restartElem.classList.remove('hidden')
     buttonElem.classList.remove('hidden')
+    // victPortEle.classList.remove('hidden')
+    restartElem.classList.remove('hidden')
     restartElem.innerText = "You beat Raid Boss Morty and a interdimensional rift appears in the corner"
   } else {
-    restartElem.classList.remove('hidden')
     buttonElem.classList.remove('hidden')
+    // victPortEle.classList.remove('hidden')
+    restartElem.classList.remove('hidden')
     restartElem.innerText = "Raid Boss Morty tosses you aside like the sad Jerry you are."
   }
 
@@ -138,6 +144,8 @@ function replay() {
   player2.health = 100;
   player2.timesMittHit = 0
   player1.timesHit = 0
+  bossHP.value = 100;
+  bossHPJerry.value = 100;
   player1.inventory = []
   player2.inventory = []
   restartElem.classList.add('hidden')
@@ -145,6 +153,8 @@ function replay() {
   draw()
   mortyWepEle.classList.add('hidden')
   wepEle.classList.add('hidden')
+  // victPortEle.classList.add('hidden')
+
 }
 
 function draw() {

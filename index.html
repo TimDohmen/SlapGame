@@ -12,18 +12,10 @@
 </head>
 
 <body>
-  <div class="hidden victory" id="victoryPort">
-    <img
-      src="https://library.kissclipart.com/20181221/jse/kissclipart-rick-and-morty-portal-clipart-morty-smith-rick-san-264d45e3c8ff3e7f.png"
-      alt="victory-portyal">
-  </div>
-  <div class="container">
-    <div class="col-12">
-      <div class="hidden" id="restart">
 
-      </div>
-      <button class="hidden btn-danger" id="replay" onclick="replay()">Play again</button>
-    </div>
+
+  <div class="container">
+
     <div class="row">
 
 
@@ -36,6 +28,7 @@
           <span>Health:<span id="mittHealth">100</span></span>
           <span>Times Hit:<span id="mittHit-Counter">--</span></span>
           <div class="col-12">
+            <progress id="healthBar" value="100" max="100"></progress>
             <img src="https://media.entertainmentearth.com/assets/images/97a7ac2ee1164819ac2ebd84ad031c3flg.jpg"
               alt="morty" class="boss">
           </div>
@@ -71,7 +64,16 @@
 
       <div class="morty-card col-3 d-flex align-content-center justify-content-center">
 
+        <div class="card">
+          Morty's Power
 
+          <p>Slap : 1</p>
+          <p>Kick : 5</p>
+          <p>Punch : 10 </p>
+
+
+
+        </div>
         <div class="card">
           Power Ups:
 
@@ -88,19 +90,10 @@
 
         </div>
 
-        <div class="card">
-          Morty's Power
 
-          <p>Slap : 1</p>
-          <p>Kick : 5</p>
-          <p>Punch : 10 </p>
-
-
-
-        </div>
       </div>
     </div>
-    <div class="col-12 pt-3 m-auto">
+    <div class="col-9 pt-3 d-flex justify-content-center">
       <button class="btn-primary" onclick="hit('slap')">Slap</button>
       <button class="btn-primary" onclick="hit('kick')">Kick</button>
       <button class="btn-primary" onclick="hit('punch')">Punch</button>
@@ -108,40 +101,53 @@
 
   </div>
 
+  <div class="container">
+    <div class="row">
+      <div class="col-6 morty-card d-flex ml-5 fixer">
+        <div class="topper">
+          <h1 id="">Strong Man Jerry</h1>
+          <span>Health:<span id='health'>100</span></span>
+          <span>Times Hit:<span id='hit-counter'>--</span></span>
+
+          <div class="col-12 d-flex ml-5 pb-2">
+            <progress id="healthBarJerry" value="100" max="100"></progress>
+          </div>
+          <img src="https://i.pinimg.com/originals/2a/c9/84/2ac9848f9a13087d290d725f3c662b5e.jpg" class="boss"
+            alt="raid boss jerry">
+
+          <div class="col-12">
+            <div class="hidden" id="p1Wep"></div>
 
 
-  <div class="col-auto morty-card d-flex ">
-    <div class="topper">
-      <h1 id="">Strong Man Jerry</h1>
-      <span>Health:<span id='health'>100</span></span>
-      <span>Times Hit:<span id='hit-counter'>--</span></span>
-      <div class="col-12">
-        <img src="https://i.pinimg.com/originals/2a/c9/84/2ac9848f9a13087d290d725f3c662b5e.jpg" class="boss"
-          alt="raid boss jerry">
+            <img
+              src="https://vignette.wikia.nocookie.net/rickandmorty/images/4/45/Defense_Mega_Seed.png/revision/latest?cb=20160909051247"
+              alt="Mega Seed" id="item1" onclick="giveItem('MegaSeed')" class="pic buttons">
+            <img
+              src="https://images.discordapp.net/avatars/301887723583569922/06e5fcaa65f33e5ffe29ff8eea85a5e5.png?size=512"
+              alt="Portal gun" id="item2" onclick="giveItem('PortalGun')" class="pic buttons">
+            <img
+              src="https://vignette.wikia.nocookie.net/rickandmorty/images/f/f7/Mr._Meeseeks_Box.png/revision/latest?cb=20160909153718"
+              alt="meeseeks box" id="item3" onclick="giveItem('MrMeeseeksBox')" class="pic buttons">
+            <img
+              src="https://www.pinclipart.com/picdir/middle/330-3300806_red-slash-png-clipart-images-gallery-for-free.png"
+              alt="unequip" id="item4" onclick="giveItem('nothing')" class="pic buttons">
+          </div>
+        </div>
       </div>
-
-      <div class="col-12">
-        <div class="hidden" id="p1Wep"></div>
+    </div>
 
 
-        <img
-          src="https://vignette.wikia.nocookie.net/rickandmorty/images/4/45/Defense_Mega_Seed.png/revision/latest?cb=20160909051247"
-          alt="Mega Seed" id="item1" onclick="giveItem('MegaSeed')" class="pic buttons">
-        <img
-          src="https://images.discordapp.net/avatars/301887723583569922/06e5fcaa65f33e5ffe29ff8eea85a5e5.png?size=512"
-          alt="Portal gun" id="item2" onclick="giveItem('PortalGun')" class="pic buttons">
-        <img
-          src="https://vignette.wikia.nocookie.net/rickandmorty/images/f/f7/Mr._Meeseeks_Box.png/revision/latest?cb=20160909153718"
-          alt="meeseeks box" id="item3" onclick="giveItem('MrMeeseeksBox')" class="pic buttons">
-        <img
-          src="https://www.pinclipart.com/picdir/middle/330-3300806_red-slash-png-clipart-images-gallery-for-free.png"
-          alt="unequip" id="item4" onclick="giveItem('nothing')" class="pic buttons">
+  </div>
+
+  <div class="row">
+    <div class="col d-flex align-content-center justify-content-center">
+      <div class="hidden" id="restart">
 
       </div>
     </div>
-  </div>
-
-
+    <div class="col-12">
+      <button class="hidden btn-danger" id="replay" onclick="replay()">Play again</button>
+    </div>
   </div>
   <h2></h2>
   </div>

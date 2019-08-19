@@ -7,13 +7,15 @@ body{
   max-width: 50vw;
   
 }
-
+.fixer{
+  flex-flow: column wrap
+}
 .boss{
   max-width: 30vh;
 }
 .topper{
-  justify-content: center;
-  align-content: center;
+ justify-content: center;
+ align-content: center;
 
 }
 .hidden{
@@ -30,7 +32,8 @@ body{
   color: black
 }
 .victory{
-
+min-width: 50vw;
+min-height: 100vh;
   animation: rotation 2s infinite linear;
 
 }

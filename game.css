@@ -50,4 +50,11 @@ min-height: 100vh;
 .bigPic{
   cursor: pointer;
   max-width: 10vw;
+  animation: rotate 6s infinite linear;
+ 
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
 }

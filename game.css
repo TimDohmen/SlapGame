@@ -4,6 +4,7 @@ body{
   display: flex;
   text-align: center;
   color: white;
+  max-width: 50vw;
   
 }
 
@@ -32,4 +33,14 @@ body{
 
   animation: rotation 2s infinite linear;
 
+}
+.morty-card{
+  border-radius: 5px;
+  align-self: center;
+  
+  color: black;
+  min-width: 25vw;
+}
+.buttons:hover{
+  border: 2px solid black; border-radius: 100px;
 }

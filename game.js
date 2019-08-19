@@ -61,38 +61,27 @@ let items = {
 function giveItem(item) {
   if (items.hasOwnProperty(item)) {
     player1.inventory.push(items[item])
-
-
   }
-
   if ((item) == "nothing") {
     wepEle.classList.add('hidden')
-
   } else {
     wepEle.classList.remove('hidden')
     wepEle.innerText = `Currently Equipped : ${(item)}`
-
   }
 }
-
-
 
 function giveMittItem(item) {
   if (items.hasOwnProperty(item)) {
     player2.inventory.push(items[item])
     mortyWepEle.classList.remove('hidden')
     mortyWepEle.innerText = `Currently Equipped : ${(item)}`
-
   }
-
   if ((item) == "nothing") {
     mortyWepEle.classList.add('hidden')
-
   } else {
     mortyWepEle.classList.remove('hidden')
     mortyWepEle.innerText = `Currently Equipped : ${(item)}`
   }
-
 }
 
 function addMods() {
